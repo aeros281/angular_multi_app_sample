@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CoreLibService } from './core-lib.service';
+import { HttpMockApiService } from './http-mock-api.service';
 
-describe('CoreLibService', () => {
-  let service: CoreLibService;
+describe('HttpApiService', () => {
+  let service: HttpMockApiService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(CoreLibService);
+    service = TestBed.inject(HttpMockApiService);
   });
 
   it('should be created', () => {
