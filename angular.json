@@ -22,7 +22,7 @@
             "main": "projects/lolstats/src/main.ts",
             "polyfills": "projects/lolstats/src/polyfills.ts",
             "tsConfig": "projects/lolstats/tsconfig.app.json",
-            "aot": true,
+            "aot": false,
             "assets": [
               "projects/lolstats/src/favicon.ico",
               "projects/lolstats/src/assets"

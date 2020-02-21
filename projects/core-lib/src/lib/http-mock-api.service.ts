@@ -9,6 +9,6 @@ export class HttpMockApiInterceptor implements HttpInterceptor {
 
     const currentMockEndpoints = mockEndpoints[req.method] && mockEndpoints[req.method][req.url] || null;
 
-    return currentMockEndpoints ? currentMockEndpoints.handle(req) : next.handle(req);
+    return currentMockEndpoints ? currentMockEndpoints.handler(req) : next.handle(req);
   }
 }
