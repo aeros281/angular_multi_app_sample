@@ -1,10 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { MatSliderModule } from '@angular/material/slider';
+
+import { CoreModule } from 'core-lib';
+import { ShareLibModule } from 'share-lib';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CoreModule } from 'projects/core-lib/src/lib/core-module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -14,7 +19,10 @@ import { CoreModule } from 'projects/core-lib/src/lib/core-module';
     BrowserModule,
     HttpClientModule,
     CoreModule.withMock(),
-    AppRoutingModule
+    ShareLibModule,
+    MatSliderModule,
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   bootstrap: [AppComponent]
 })

@@ -3,3 +3,4 @@
  */
 
  export * from './lib/http-mock-api.service';
+ export * from './lib/core-module';

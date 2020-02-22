@@ -22,12 +22,16 @@
       "core-lib": [
         "dist/core-lib/core-lib",
         "dist/core-lib"
+      ],
+      "share-lib": [
+        "dist/share-lib/share-lib",
+        "dist/share-lib"
       ]
     }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true,
-    "enableIvy": false,
+    "enableIvy": false
   }
 }
