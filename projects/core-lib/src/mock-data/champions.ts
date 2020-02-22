@@ -2,7 +2,20 @@ import { of } from 'rxjs';
 import { HttpResponse, HttpRequest } from '@angular/common/http';
 
 export function getAllLolChampions(req: HttpRequest<any>) {
-  return of(new HttpResponse({ status: 200, body: FAKE_DATA }));
+
+  let reqPageNum: number = parseInt(req.params.get('page'), 10) || 1;
+  let reqPageSize: number = parseInt(req.params.get('pageSize'), 10) || 50;
+
+  return of(new HttpResponse(
+    {
+      status: 200,
+      body: {
+        data: FAKE_DATA.slice((reqPageNum - 1) * reqPageSize, reqPageNum * reqPageSize),
+        count: FAKE_DATA.length,
+        flag: true
+      }
+    }
+  ));
 }
 
 const FAKE_DATA = [

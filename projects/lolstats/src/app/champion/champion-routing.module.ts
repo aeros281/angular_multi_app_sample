@@ -4,7 +4,8 @@ import { ChampionListingComponent } from './champion-listing/champion-listing.co
 
 
 const routes: Routes = [
-  { path: '', component: ChampionListingComponent }
+  { path: '', component: ChampionListingComponent
+  }
 ];
 
 @NgModule({
