@@ -1,0 +1,5 @@
+<mat-card *ngIf="champInfo | async as champInfoData; else loading">
+  <h3>{{ champInfoData?.name }}</h3>
+  <img src="{{ champInfoData?.icon }}" alt="{{ champInfoData?.name }}" />
+</mat-card>
+<

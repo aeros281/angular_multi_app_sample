@@ -12,10 +12,22 @@ export function getAllLolChampions(req: HttpRequest<any>) {
       body: {
         data: FAKE_DATA.slice((reqPageNum - 1) * reqPageSize, reqPageNum * reqPageSize),
         count: FAKE_DATA.length,
-        flag: true
       }
     }
   ));
+}
+
+export function getChampionInfo(req: HttpRequest<any>) {
+  let champId: string = req.params.get('id');
+
+  return of(new HttpResponse(
+    {
+      status: 200,
+      body: {
+        data: FAKE_DATA.filter(data => data.key === champId)[0]
+      }
+    }
+  ))
 }
 
 const FAKE_DATA = [

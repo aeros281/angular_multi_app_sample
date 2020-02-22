@@ -7,6 +7,7 @@ import { default as mockEndpoints } from '../mock-data';
 export class HttpMockApiInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
+    console.log(req.url);
     const currentMockEndpoints = mockEndpoints[req.method] && mockEndpoints[req.method][req.url.split('?')[0]] || null;
 
     return currentMockEndpoints ? currentMockEndpoints.handler(req) : next.handle(req);
