@@ -5,18 +5,33 @@
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
-    "module": "es2015",
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
+    "downlevelIteration": true,
     "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es5",
+    "target": "es2015",
     "typeRoots": [
       "node_modules/@types"
     ],
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "core-lib": [
+        "dist/core-lib/core-lib",
+        "dist/core-lib"
+      ],
+      "share-lib": [
+        "dist/share-lib/share-lib",
+        "dist/share-lib"
+      ]
+    }
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "enableIvy": false
   }
 }
